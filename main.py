@@ -5,6 +5,7 @@ from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str):
+    """Вывод команды."""
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный '
                 f'{5 + randint(3, 5)}')
@@ -18,6 +19,7 @@ def attack(char_name: str, char_class: str):
 
 
 def defence(char_name: str, char_class: str):
+    """Уровень защиты персонажа."""
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     if char_class == 'mage':
@@ -28,6 +30,7 @@ def defence(char_name: str, char_class: str):
 
 
 def special(char_name: str, char_class: str):
+    """Определение навыков персонажа."""
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение '
                 f'«Выносливость {80 + 25}»')
@@ -39,6 +42,7 @@ def special(char_name: str, char_class: str):
 
 
 def start_training(char_name: str, char_class: str):
+    """Определение выбранной роли персонажа."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -63,9 +67,17 @@ def start_training(char_name: str, char_class: str):
 
 
 def choice_char_class():
+    """
+    Вводим значения переменных,
+    которые определяют выбор игрока.
+    """
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
+        """
+        Подтверждение сделанного выбора,
+        если Y - игра продолжается с выбранным персонажем.
+        """
         char_class: str = input('Введи название персонажа, '
                                 'за которого хочешь играть: '
                                 'Воитель — warrior, '
