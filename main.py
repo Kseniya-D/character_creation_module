@@ -67,9 +67,8 @@ def start_training(char_name: str, char_class: str):
 
 
 def choice_char_class():
-    """
-    Вводим значения переменных,
-    которые определяют выбор игрока.
+    """Вводим значения переменных.
+    Определяем выбор игрока.
     """
     approve_choice = None
     char_class = None
